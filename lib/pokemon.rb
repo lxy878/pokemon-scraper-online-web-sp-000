@@ -8,8 +8,8 @@ class Pokemon
     @db = db
   end
 
-  def self.save(id=nil, name, type, db)
-    binding.pry
+  def self.save(name, type, db)
+    
   end
 
   def self.find
