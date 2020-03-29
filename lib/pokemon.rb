@@ -1,6 +1,6 @@
 class Pokemon
-  attr_accessor :name, :type
-  attr_reader :id, :db
+  attr_accessor :name, :type, :id
+  attr_reader :db
   def initialize(id: nil, name:, type:, db:)
     @id = id
     @name = name
@@ -14,7 +14,7 @@ class Pokemon
       INSERT INTO pokemon(name, type) VALUES (?,?)
     SQL
     DB[:conn].execute(sql, new_pokemon.name, new_pokemon.type)
-    new_pokemon.id = 
+    new_pokemon.id =
   end
 
   def self.find
