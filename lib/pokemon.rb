@@ -10,6 +10,9 @@ class Pokemon
 
   def self.save(name, type, db)
     new_pokemon = Pokemon.new(name, type, db)
+    sql = <<-SQL
+      INSERT INTO 
+    SQL
   end
 
   def self.find
