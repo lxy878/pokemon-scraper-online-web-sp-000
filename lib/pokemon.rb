@@ -18,7 +18,11 @@ class Pokemon
   end
 
   def self.find(id, db)
-
+    sql = <<-SQL
+      SELECT * FROM pokemon WHERE id = ?
+    SQL
+    pokemon_array = db.execute(sql, id)
+    
   end
 
 end
