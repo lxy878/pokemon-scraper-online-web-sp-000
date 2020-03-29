@@ -22,7 +22,7 @@ class Pokemon
       SELECT * FROM pokemon WHERE id = ?
     SQL
     pokemon_array = db.execute(sql, id)
-    
+    pokemon_array.collect {|data| Pokemon.new(data[0], data[1], data[2], db)}.first
   end
 
 end
