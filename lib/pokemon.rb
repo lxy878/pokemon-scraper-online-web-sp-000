@@ -6,10 +6,11 @@ class Pokemon
     @name = name
     @type = type
     @db = db
+    self.class.save
   end
 
   def self.save
-    if 
+    binding.pry
   end
 
   def self.find
